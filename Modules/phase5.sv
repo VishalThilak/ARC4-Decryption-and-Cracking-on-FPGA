@@ -16,7 +16,7 @@
 `define E 7'b0000110
 `define F 7'b0001110
 `define DEBUG 7'b0111111
-module task5(input logic CLOCK_50, input logic [3:0] KEY, input logic [9:0] SW,
+module phase5(input logic CLOCK_50, input logic [3:0] KEY, input logic [9:0] SW,
              output logic [6:0] HEX0, output logic [6:0] HEX1, output logic [6:0] HEX2,
              output logic [6:0] HEX3, output logic [6:0] HEX4, output logic [6:0] HEX5,
              output logic [9:0] LEDR);
@@ -65,7 +65,7 @@ module task5(input logic CLOCK_50, input logic [3:0] KEY, input logic [9:0] SW,
     drawseg hex4(.key_valid(key_valid), .val(hex_seg_4), .seg(HEX4));
     drawseg hex5(.key_valid(key_valid), .val(hex_seg_5), .seg(HEX5));
 
-endmodule: task5
+endmodule: phase5
 
 module drawseg(input logic key_valid, input logic [3:0] val, output logic [6:0] seg);
 
